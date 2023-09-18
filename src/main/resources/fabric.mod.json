@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "lanmod",
+	"version": "${version}",
+	"name": "lanmod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/lanmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"cn.catver.lanmod.ExampleMod"
+		],
+		"client": [
+			"cn.catver.lanmod.ExampleModClient"
+		]
+	},
+	"mixins": [
+		"lanmod.mixins.json",
+		{
+			"config": "lanmod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
